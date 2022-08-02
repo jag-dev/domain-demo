@@ -1,0 +1,54 @@
+.positioned {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.title {
+  top: 40%;
+  font-family: arial;
+  letter-spacing: 2px;
+}
+.login-btn {
+  background-image: url('img/default-button.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 48px;
+  width: 385px;
+  border: none;
+  box-shadow: 2px 2px 5px #999;
+  
+  -webkit-transition: background-image 0.2s ease-in-out;
+  transition: background-image 0.2s ease-in-out;
+}
+.login-btn:hover {
+  background-image: url('img/pressed-button.png');
+  cursor: pointer;
+	
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
+.logout-btn {
+  display: inline-block;
+  padding: 0.75em 2.2em;
+  border: 0.1em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #FFF;
+  background-color: #4C47F7;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.logout-btn:hover{
+  color: #4C47F7;
+  cursor: pointer;
+  background-color: #FFFFFF;
+  border: 0.1em solid #4C47F7;
+}

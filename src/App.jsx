@@ -2,12 +2,13 @@ import UAuth from '@uauth/js'
 import React, {useEffect, useState} from 'react'
 import ReactDOM from 'react-dom'
 
+import './App.css';
+
 const uauth = new UAuth({
-  clientID: '',
-  clientSecret: '',
-  redirectUri: '',
-  scope: 'openid email wallet',
-})
+    clientID: process.env.REACT_APP_CLIENT_SECRET,
+    redirectUri: process.env.REACT_APP_REDIRECT_URI,
+    scope: "openid wallet"
+  })
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(false)
@@ -56,13 +57,16 @@ const App: React.FC = () => {
   if (user) {
     return (
       <>
-        <pre>{JSON.stringify(user, null, 2)}</pre>
-        <button onClick={handleLogout}>Logout</button>
+        <pre className="positioned">{JSON.stringify(user, null, 2)}</pre>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </>
     )
   }
 
-  return <button onClick={handleLogin}>Login with Unstoppable</button>
+  return <>
+    <h1 className="title positioned">Authentication Demo</h1>
+    <button className="login-btn positioned" onClick={handleLogin}></button>
+   </>
 }
 
 ReactDOM.render(
