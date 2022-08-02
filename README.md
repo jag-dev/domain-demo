@@ -27,5 +27,7 @@ Video link [here](https://wentworth-institute.hosted.panopto.com/Panopto/Pages/V
 
 ## Contributors
 James Guiden (guidenj@wit.edu)
+
 Michael Richards (richardsm3@wit.edu)
+
 Patrick Coulter (coulterp@wit.edu)
